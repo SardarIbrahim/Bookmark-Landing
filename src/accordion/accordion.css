@@ -1,0 +1,89 @@
+:root {
+  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Red: hsl(0, 94%, 66%);
+
+  --Grayish-Blue: hsl(229, 8%, 60%);
+  --Dark-Blue: hsl(229, 31%, 21%);
+}
+
+.accordion {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-block: 3rem;
+}
+
+.accordion h1 {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.accordion p {
+  width: 42%;
+  margin-top: 2rem;
+}
+
+/* questions */
+.questions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.question span {
+  display: block;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted var(--Grayish-Blue);
+  cursor: pointer;
+  padding-block: 1rem;
+}
+
+.question p,
+span {
+  color: var(--Dark-Blue);
+}
+
+.question:hover p {
+  color: var(--Soft-Red);
+}
+
+.question span#show {
+  color: var(--Soft-Red);
+}
+.question p.active {
+  color: var(--Soft-Red);
+}
+
+.answer {
+  width: 100%;
+  border-bottom: 1px dotted var(--Grayish-Blue);
+  display: none;
+  padding-block: 1rem;
+}
+
+.answer#show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion h1 {
+    text-align: center;
+  }
+
+  .accordion p {
+    width: 70%;
+    text-align: center;
+  }
+}

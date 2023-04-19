@@ -1,0 +1,118 @@
+:root {
+  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Red: hsl(0, 94%, 66%);
+
+  --Grayish-Blue: hsl(229, 8%, 60%);
+  --Dark-Blue: hsl(229, 31%, 21%);
+}
+
+.downloads {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-block: 3rem;
+}
+
+.downloads h1 {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.downloads p {
+  width: 40%;
+  margin-top: 2rem;
+}
+
+/* cards */
+
+.extensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.extension-card {
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.extension-card h2 {
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.extension-card p {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.extensions .extension-card:nth-child(2) {
+  transform: translateY(30px);
+}
+.extensions .extension-card:nth-child(3) {
+  transform: translateY(60px);
+}
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-btn button {
+  background-color: var(--Soft-Blue);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: var(--trans);
+  margin-top: 1rem;
+}
+.add-btn button:hover {
+  background-color: transparent;
+  border: 2px solid var(--Soft-Blue);
+  color: var(--Soft-Blue);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .downloads p {
+    width: 70%;
+  }
+  .extensions {
+    padding: 0rem 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .downloads h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .downloads h1 {
+    text-align: center;
+  }
+
+  .downloads p {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+}

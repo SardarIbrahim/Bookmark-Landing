@@ -1,0 +1,125 @@
+:root {
+  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Red: hsl(0, 94%, 66%);
+
+  --Grayish-Blue: hsl(229, 8%, 60%);
+  --Dark-Blue: hsl(229, 31%, 21%);
+  --trans: all 0.3s ease-in-out;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--Dark-Blue);
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 3rem;
+  position: relative;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul li.menu-items {
+  padding: 0.3rem 1.3rem;
+  margin-right: 15px;
+  color: var(--Dark-Blue);
+  transition: var(--trans);
+  border: none;
+  list-style: none;
+  text-transform: uppercase;
+}
+.menu ul li.menu-items:hover {
+  color: var(--Soft-Red);
+  cursor: pointer;
+}
+
+#btn-login {
+  background-color: var(--Soft-Red);
+  transition: var(--trans);
+  border-radius: 7px;
+  border: 1px solid transparent;
+  color: white;
+  padding: 0.3rem 1.5rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#btn-login:hover {
+  background-color: transparent;
+  border: 1px solid var(--Soft-Red);
+  color: var(--Soft-Red);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger {
+    display: block;
+    z-index: 2;
+    position: relative;
+  }
+  .bar {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    right: 0%;
+    bottom: 0%;
+    width: 70vw;
+    height: 100vh;
+    background-color: var(--Dark-Blue);
+    color: white;
+    opacity: 0.9;
+    z-index: 1;
+    border-radius: 5px;
+    transition: var(--trans);
+  }
+  .menu.active ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu.active ul li.menu-items {
+    color: white;
+    border-bottom: 2px dotted white;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .menu.active ul li.menu-items:hover {
+    border-bottom: 2px dotted var(--Soft-Red);
+  }
+
+  li#btn-login {
+    margin-top: 3rem;
+    width: 50%;
+  }
+}

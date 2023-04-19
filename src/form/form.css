@@ -1,0 +1,88 @@
+:root {
+  --Soft-Blue: hsl(231, 69%, 60%);
+  --Soft-Red: hsl(0, 94%, 66%);
+
+  --Grayish-Blue: hsl(229, 8%, 60%);
+  --Dark-Blue: hsl(229, 31%, 21%);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 3rem;
+  background-color: var(--Soft-Blue);
+  color: white;
+  margin-top: 5rem;
+}
+
+.form p,
+h1 span {
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.form p {
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.form h1 span {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.form-control {
+  padding-block: 2rem;
+  position: relative;
+}
+
+.form .form-control input {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+
+.form-control .error {
+  width: 100%;
+  min-height: 40%;
+  position: absolute;
+  bottom: -55%;
+  left: 0%;
+  color: white;
+  background-color: var(--Soft-Red);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: none;
+}
+
+.form-control .error.show {
+  display: block;
+}
+.form-control .error.show.success {
+  display: block;
+  background-color: greenyellow;
+}
+.form-control .btn-contact {
+  padding: 10px 1rem;
+  color: white;
+  background-color: var(--Soft-Red);
+  text-align: center;
+  margin-left: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: var(--trans);
+}
+.form-control .btn-contact:hover {
+  background-color: white;
+  color: var(--Soft-Red);
+  border: 2px solid var(--Soft-Red);
+}
